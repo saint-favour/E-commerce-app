@@ -61,11 +61,6 @@ const MenuStyle = styled.div`
     margin-left: 1rem;
   }
 
-  .profile {
-    width: 2rem;
-    aspect-ratio: 1;
-  }
-
   .cart {
     display: flex;
     justify-content: space-evenly;

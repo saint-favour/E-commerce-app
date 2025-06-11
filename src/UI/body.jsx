@@ -13,6 +13,7 @@ import {
 } from "./all-img";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useState } from "react";
+import ImageSlider from "./imageSlider";
 
 export default function Main() {
   const items = [smallerpic1, smallerpic2, smallerpic3, smallerpic4];
@@ -20,41 +21,15 @@ export default function Main() {
 
   const [count, setCount] = useState(0);
   const [image, setImage] = useState(main[0]);
-  const [currentIndex, setCurrentIndex] = useState(main[0]);
 
-  function next() {
-    const isFirstSide = currentIndex === main[0];
-    const newImage = isFirstSide ? main.length - 1 : currentIndex - 1;
-    setCurrentIndex(newImage);
-    console.log(newImage);
-  }
 
-  function prev() {
-    const isLastSide = currentIndex === main.length - 1;
-    const newImage = isLastSide ? main[0] : currentIndex + 1;
-    setCurrentIndex(newImage);
-    console.log(newImage);
-  }
+  
 
   return (
     <Mainstyle>
       <div>
         <img src={image} alt="sneaker-one" className="product-1" />
-
-        <div className="slider-container">
-          <div className="right-arrow" onClick={next}>
-            ›
-          </div>
-          <div className="left-arrow" onClick={prev}>
-            ‹
-          </div>
-          <img
-            src={main[currentIndex]}
-            alt="slider-img"
-            className="product-2"
-          />
-        </div>
-
+        <ImageSlider />
         <div className="small-pic">
           <img
             src={items[0]}
@@ -321,6 +296,7 @@ const Mainstyle = styled.main`
       aspect-ratio: 1;
       object-fit: contain;
       border-radius: 0;
+
     }
 
     .buy-section {
@@ -351,3 +327,4 @@ const Mainstyle = styled.main`
     }
   }
 `;
+
