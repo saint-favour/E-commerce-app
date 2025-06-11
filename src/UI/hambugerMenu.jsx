@@ -53,7 +53,7 @@ const MenuStyle = styled.div`
 
   .ham {
     position: relative;
-    z-index: 3;
+    z-index: 6;
     cursor: pointer;
   }
 
@@ -80,6 +80,7 @@ const Slide = styled.nav`
   width: 16rem;
   height: 150dvh;
   background-color: white;
+  z-index: 3;
 
   ul {
     padding: 0;
