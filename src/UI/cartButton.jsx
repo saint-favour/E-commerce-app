@@ -1,13 +1,14 @@
-import {useState } from "react";
+import { useState } from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import profilePic from "../assets/image-avatar.png";
 import cartImage from "../assets/image-product-1-thumbnail.jpg";
 import styled from "styled-components";
 
-
 export default function CartList() {
   const [show, setShow] = useState(false);
   return (
+    // there's no need for the fragment here i.e. <></> since we're only returning one element i.e. <CartDesign></CartDesign>
+    // fr check your prettier config these files need proper formatting
     <>
       <CartDesign>
         <div className="product-count">0</div>

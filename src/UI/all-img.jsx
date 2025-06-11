@@ -27,3 +27,5 @@ export {
   prev,
 };
 
+// ok so this is not a component
+// so you need to move it to a folder named "data" since its a data related file, so take this out of the ui folder

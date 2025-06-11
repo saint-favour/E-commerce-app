@@ -22,7 +22,7 @@ export default function Main() {
   const [count, setCount] = useState(0);
   const [image, setImage] = useState(main[0]);
 
-
+// too much spacing here - what happened to prettier?
   
 
   return (

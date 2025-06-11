@@ -26,6 +26,7 @@ export default function ImageSlider(){
 
     return (
       <div className="slider-container">
+        {/* use actual icons next time */}
         <div className="right-arrow" onClick={() => next()}>
           ›
         </div>
